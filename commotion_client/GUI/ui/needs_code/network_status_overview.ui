@@ -113,7 +113,7 @@
        <enum>QLayout::SetMinAndMaxSize</enum>
       </property>
       <item>
-       <widget class="QLabel" name="title_head">
+       <widget class="QLabel" name="network_status_head">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
           <horstretch>0</horstretch>

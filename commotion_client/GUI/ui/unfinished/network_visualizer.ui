@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>user_security_settings</class>
- <widget class="QDialog" name="user_security_settings">
+ <class>network_visualizer</class>
+ <widget class="QDialog" name="network_visualizer">
   <property name="windowModality">
    <enum>Qt::ApplicationModal</enum>
   </property>
@@ -97,7 +97,7 @@
   <property name="windowTitle">
    <string>Commotion Error</string>
   </property>
-  <widget class="QLabel" name="security_settings_head">
+  <widget class="QLabel" name="mesh_viz_head">
    <property name="geometry">
     <rect>
      <x>11</x>
@@ -120,7 +120,7 @@
     </font>
    </property>
    <property name="text">
-    <string>Security Settings</string>
+    <string>Network Visualizer</string>
    </property>
    <property name="scaledContents">
     <bool>false</bool>
@@ -130,31 +130,6 @@
    </property>
    <property name="margin">
     <number>0</number>
-   </property>
-  </widget>
-  <widget class="QLabel" name="security_intro_text">
-   <property name="geometry">
-    <rect>
-     <x>11</x>
-     <y>42</y>
-     <width>438</width>
-     <height>24</height>
-    </rect>
-   </property>
-   <property name="maximumSize">
-    <size>
-     <width>600</width>
-     <height>25</height>
-    </size>
-   </property>
-   <property name="text">
-    <string>Change the security settings for this server.</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-   </property>
-   <property name="margin">
-    <number>1</number>
    </property>
   </widget>
   <widget class="QWidget" name="layoutWidget">
@@ -228,12 +203,28 @@
     </item>
    </layout>
   </widget>
-  <widget class="QLabel" name="firewall_settings_header">
+  <widget class="QCheckBox" name="app_perm">
    <property name="geometry">
     <rect>
-     <x>11</x>
-     <y>78</y>
-     <width>85</width>
+     <x>30</x>
+     <y>510</y>
+     <width>191</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Automatically adjust </string>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="gw_node_icon">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>510</y>
+     <width>91</width>
      <height>24</height>
     </rect>
    </property>
@@ -245,12 +236,14 @@
    </property>
    <property name="font">
     <font>
-     <weight>75</weight>
-     <bold>true</bold>
+     <pointsize>10</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
     </font>
    </property>
    <property name="text">
-    <string>Firewall</string>
+    <string>Gateway node</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -262,197 +255,50 @@
     <number>1</number>
    </property>
   </widget>
-  <widget class="Line" name="line_3">
+  <widget class="QLabel" name="gw_node_icon_2">
    <property name="geometry">
     <rect>
-     <x>0</x>
-     <y>90</y>
-     <width>630</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="orientation">
-    <enum>Qt::Horizontal</enum>
-   </property>
-  </widget>
-  <widget class="QTabWidget" name="firewall_tabs">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>160</y>
-     <width>611</width>
-     <height>381</height>
-    </rect>
-   </property>
-   <property name="currentIndex">
-    <number>1</number>
-   </property>
-   <widget class="QWidget" name="tab">
-    <attribute name="title">
-     <string>IPv4 Firewall</string>
-    </attribute>
-    <widget class="QPushButton" name="reset_counters4">
-     <property name="geometry">
-      <rect>
-       <x>480</x>
-       <y>0</y>
-       <width>121</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Reset Counters</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="restart_firewall4">
-     <property name="geometry">
-      <rect>
-       <x>320</x>
-       <y>0</y>
-       <width>131</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Restart Firewall</string>
-     </property>
-    </widget>
-    <widget class="QTableWidget" name="table_placeholder_filters4">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>50</y>
-       <width>591</width>
-       <height>61</height>
-      </rect>
-     </property>
-    </widget>
-    <widget class="QTableWidget" name="table_placeholder_nat4">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>120</y>
-       <width>591</width>
-       <height>61</height>
-      </rect>
-     </property>
-    </widget>
-    <widget class="QTableWidget" name="table_placeholder_mangle4">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>190</y>
-       <width>591</width>
-       <height>61</height>
-      </rect>
-     </property>
-    </widget>
-    <widget class="QTableWidget" name="table_placeholder_raw4">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>260</y>
-       <width>591</width>
-       <height>61</height>
-      </rect>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QWidget" name="tab_2">
-    <attribute name="title">
-     <string>Ipv6 Firewall</string>
-    </attribute>
-    <widget class="QPushButton" name="reset_counters6">
-     <property name="geometry">
-      <rect>
-       <x>480</x>
-       <y>0</y>
-       <width>121</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Reset Counters</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="restart_firewall6">
-     <property name="geometry">
-      <rect>
-       <x>320</x>
-       <y>0</y>
-       <width>131</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Restart Firewall</string>
-     </property>
-    </widget>
-    <widget class="QTableWidget" name="table_placeholder_filters6">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>40</y>
-       <width>591</width>
-       <height>61</height>
-      </rect>
-     </property>
-    </widget>
-    <widget class="QTableWidget" name="table_placeholder_mangle6">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>180</y>
-       <width>591</width>
-       <height>61</height>
-      </rect>
-     </property>
-    </widget>
-    <widget class="QTableWidget" name="table_placeholder_nat6">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>110</y>
-       <width>591</width>
-       <height>61</height>
-      </rect>
-     </property>
-    </widget>
-    <widget class="QTableWidget" name="table_placeholder_raw6">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>250</y>
-       <width>591</width>
-       <height>61</height>
-      </rect>
-     </property>
-    </widget>
-   </widget>
-  </widget>
-  <widget class="QLabel" name="security_intro_text_2">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>100</y>
-     <width>438</width>
+     <x>440</x>
+     <y>510</y>
+     <width>91</width>
      <height>24</height>
     </rect>
    </property>
    <property name="maximumSize">
     <size>
      <width>600</width>
-     <height>25</height>
+     <height>30</height>
     </size>
    </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
    <property name="text">
-    <string>Change the firewall rules.</string>
+    <string>Basic node</string>
    </property>
    <property name="alignment">
-    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
    </property>
    <property name="margin">
     <number>1</number>
+   </property>
+  </widget>
+  <widget class="QGraphicsView" name="mesh_viz_placeholder">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>70</y>
+     <width>551</width>
+     <height>391</height>
+    </rect>
    </property>
   </widget>
  </widget>
@@ -463,7 +309,7 @@
   <connection>
    <sender>discard_button</sender>
    <signal>clicked()</signal>
-   <receiver>user_security_settings</receiver>
+   <receiver>network_visualizer</receiver>
    <slot>close()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -479,7 +325,7 @@
   <connection>
    <sender>save_button</sender>
    <signal>clicked()</signal>
-   <receiver>user_security_settings</receiver>
+   <receiver>network_visualizer</receiver>
    <slot>close()</slot>
    <hints>
     <hint type="sourcelabel">

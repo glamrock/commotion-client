@@ -136,7 +136,7 @@
     <item>
      <layout class="QVBoxLayout" name="verticalLayout_3">
       <item>
-       <widget class="QLabel" name="app_label">
+       <widget class="QLabel" name="app_viewer_head">
         <property name="font">
          <font>
           <pointsize>18</pointsize>
@@ -718,7 +718,7 @@
   </widget>
  </widget>
  <resources>
-  <include location="../assets/commotion_assets.qrc"/>
+  <include location="../untitled1/qml.qrc"/>
  </resources>
  <connections>
   <connection>

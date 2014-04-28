@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>app_settings</class>
- <widget class="QDialog" name="app_settings">
+ <class>add_app</class>
+ <widget class="QDialog" name="add_app">
   <property name="windowModality">
    <enum>Qt::ApplicationModal</enum>
   </property>
@@ -791,7 +791,7 @@
     <number>1</number>
    </property>
   </widget>
-  <widget class="QLineEdit" name="app_address_3">
+  <widget class="QLineEdit" name="app_hops">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -844,7 +844,7 @@
     <number>1</number>
    </property>
   </widget>
-  <widget class="QLabel" name="appname_descriptor_4">
+  <widget class="QLabel" name="apphops_info">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -896,7 +896,7 @@
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QLabel" name="app_hops_head_2">
+  <widget class="QLabel" name="app_perm_head">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -954,11 +954,11 @@
   <zorder>app_address_2</zorder>
   <zorder>optional1</zorder>
   <zorder>optional2</zorder>
-  <zorder>app_address_3</zorder>
+  <zorder>app_hops</zorder>
   <zorder>app_hops_head</zorder>
-  <zorder>appname_descriptor_4</zorder>
+  <zorder>apphops_info</zorder>
   <zorder>app_perm</zorder>
-  <zorder>app_hops_head_2</zorder>
+  <zorder>app_perm_head</zorder>
  </widget>
  <tabstops>
   <tabstop>app_name</tabstop>
@@ -969,7 +969,7 @@
   <tabstop>app_fun</tabstop>
   <tabstop>app_icon</tabstop>
   <tabstop>app_address_2</tabstop>
-  <tabstop>app_address_3</tabstop>
+  <tabstop>app_hops</tabstop>
   <tabstop>app_perm</tabstop>
   <tabstop>discard_button</tabstop>
   <tabstop>save_button</tabstop>
@@ -981,7 +981,7 @@
   <connection>
    <sender>discard_button</sender>
    <signal>clicked()</signal>
-   <receiver>app_settings</receiver>
+   <receiver>add_app</receiver>
    <slot>close()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -997,7 +997,7 @@
   <connection>
    <sender>save_button</sender>
    <signal>clicked()</signal>
-   <receiver>app_settings</receiver>
+   <receiver>add_app</receiver>
    <slot>close()</slot>
    <hints>
     <hint type="sourcelabel">
