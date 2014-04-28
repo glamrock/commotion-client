@@ -243,7 +243,7 @@
     <number>1</number>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>5</x>
@@ -314,7 +314,7 @@
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -363,7 +363,7 @@
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -422,7 +422,7 @@
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -489,18 +489,31 @@
     </item>
    </layout>
   </widget>
+  <zorder>categories_head</zorder>
+  <zorder>sorry_label</zorder>
+  <zorder>error_text</zorder>
+  <zorder>layoutWidget</zorder>
+  <zorder>layoutWidget</zorder>
+  <zorder>layoutWidget</zorder>
+  <zorder>layoutWidget</zorder>
   <zorder>line</zorder>
-  <zorder>verticalLayoutWidget</zorder>
-  <zorder>cat1_box</zorder>
-  <zorder>report_info_3</zorder>
-  <zorder>cat1_box_2</zorder>
-  <zorder>cat1_box_3</zorder>
-  <zorder>expiry_time</zorder>
-  <zorder>expiry_time_text</zorder>
   <zorder>auto_approve_apps</zorder>
   <zorder>check_apps</zorder>
   <zorder>check_apps_2</zorder>
  </widget>
+ <tabstops>
+  <tabstop>cat1_box</tabstop>
+  <tabstop>cat1_box_2</tabstop>
+  <tabstop>cat1_box_3</tabstop>
+  <tabstop>force_expire_box</tabstop>
+  <tabstop>expiry_time</tabstop>
+  <tabstop>time_type</tabstop>
+  <tabstop>auto_approve_apps</tabstop>
+  <tabstop>check_apps</tabstop>
+  <tabstop>check_apps_2</tabstop>
+  <tabstop>discard_button</tabstop>
+  <tabstop>save_button</tabstop>
+ </tabstops>
  <resources>
   <include location="../untitled1/qml.qrc"/>
  </resources>

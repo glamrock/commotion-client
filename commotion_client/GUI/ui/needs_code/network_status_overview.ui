@@ -304,7 +304,7 @@
        </size>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <property name="usesScrollButtons">
        <bool>false</bool>
@@ -542,6 +542,12 @@
    </layout>
   </widget>
  </widget>
+ <tabstops>
+  <tabstop>network_status_tabs</tabstop>
+  <tabstop>nearby_mesh_devices</tabstop>
+  <tabstop>connected_clients_table</tabstop>
+  <tabstop>debug_report_text</tabstop>
+ </tabstops>
  <resources>
   <include location="../untitled1/qml.qrc"/>
  </resources>
